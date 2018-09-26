@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vue-computed</title>
+</head>
+<body>
+	<div id="app">
+		<p>顺序：{{msg}}</p>
+		<p>倒序：{{revMsg}}</p>
+	</div>
+	<script type="text/javascript" src="./vue.js"></script>
+	<script type="text/javascript">
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				msg: 'hello'
+			},
+			computed: {
+				revMsg: function(){
+					return this.msg.split('').reverse().join('')
+				}
+			}
+		})
+	</script>
+</body>
+</html>
